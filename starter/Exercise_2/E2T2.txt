@@ -1,0 +1,16 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+- UDP port 23 which is associated with 'Telnet' is reachable from the internet
+- TCP port 23 which is associated with 'Telnet' is reachable from the internet
+- UDP port 21 which is associated with 'FTP' is reachable from the internet
+- TCP port 21 which is associated with 'FTP' is reachable from the internet
+- S3 buckets lack server-side encryption and logging is not enabled
+- Security Group allow ingress from 0.0.0.0/0 to port 22
+- Security Group allow ingress from 0.0.0.0/0 to port 3389
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Edit the Security Group to remove access from internet on port 21, 23
+- Provide specific IP address range for Security Group ingress on port 22
+- Remove unrestricted access to port 3389
+- Enable server side encryption for S3
+- Enable S3 logging
