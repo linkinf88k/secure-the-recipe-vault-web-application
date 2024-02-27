@@ -1,0 +1,11 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+- Disable SSH password authentication.
+- Use a strong SSH key pair.
+- Limit SSH access to specific IP addresses.
+- Regularly monitor SSH logs for any suspicious activity.sudo vi /etc/ssh/sshd_config
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Create an IAM role with read-only access to the secret recipes bucket and assigned it to the instances.
+- Enable Server-side Encryption for the secret recipes bucket.
